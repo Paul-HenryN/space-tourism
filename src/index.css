@@ -4,9 +4,6 @@ body {
   font-size: var(--fs-neutral);
   color: hsl(var(--clr-neutral));
   background-color: hsl(var(--clr-primary));
-  background-image: url("./assets/home/background-home-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
 }
 
 h1,
@@ -17,4 +14,8 @@ h5 {
   font-family: var(--ff-primary);
   color: hsl(var(--clr-secondary));
   text-transform: uppercase;
+}
+button {
+  background: none;
+  border: none;
 }

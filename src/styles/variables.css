@@ -32,14 +32,14 @@
   /* Spacing */
   --space-unit: 1em; /*16px*/
 
-  --space-xxs: calc(var(--space-unit) * 0.75); /*12px*/
-  --space-xs: calc(var(--space-unit) * 1); /*16px*/
-  --space-sm: calc(var(--space-unit) * 1.5); /*24px*/
-  --space-md: calc(var(--space-unit) * 1.75); /*28px*/
+  --space-xxxs: calc(var(--space-unit) * 0.75); /*12px*/
+  --space-xxs: calc(var(--space-unit) * 1); /*16px*/
+  --space-xs: calc(var(--space-unit) * 1.5); /*24px*/
+  --space-sm: calc(var(--space-unit) * 1.75); /*28px*/
   --space-md: calc(var(--space-unit) * 2.25); /*36px*/
-  --space-sm: calc(var(--space-unit) * 3); /*48px*/
-  --space-sm: calc(var(--space-unit) * 3.375); /*54px*/
-  --space-lg: calc(var(--space-unit) * 7.5); /*80px*/
-  --space-xl: calc(var(--space-unit) * 8.4375); /*135px*/
-  --space-xl: calc(var(--space-unit) * 9.625); /*154px*/
+  --space-lg: calc(var(--space-unit) * 3); /*48px*/
+  --space-xl: calc(var(--space-unit) * 3.375); /*54px*/
+  --space-xxl: calc(var(--space-unit) * 7.5); /*80px*/
+  --space-xxxl: calc(var(--space-unit) * 8.4375); /*135px*/
+  --space-xxxxl: calc(var(--space-unit) * 9.625); /*154px*/
 }

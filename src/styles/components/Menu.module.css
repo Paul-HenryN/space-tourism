@@ -1,0 +1,7 @@
+.menu {
+  background-color: hsla(0, 0%, 100%, 4%);
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
