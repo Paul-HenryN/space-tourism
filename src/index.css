@@ -2,8 +2,16 @@
 body {
   font-family: var(--ff-neutral);
   font-size: var(--fs-neutral);
+  font-weight: 400;
   color: hsl(var(--clr-neutral));
   background-color: hsl(var(--clr-primary));
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  body {
+    text-align: start;
+  }
 }
 
 h1,
