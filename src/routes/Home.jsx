@@ -4,7 +4,7 @@ import styles from "../styles/pages/Home.module.css";
 export default function Home() {
   return (
     <Column
-      className={`${styles.container} align-center row-gap-xxl mx-auto mg-top-sm`}
+      className={`${styles.container} align-center row-gap-xxl mx-auto mg-top-sm tablet-mg-top-xxl tablet-row-gap-xxxxl`}
     >
       <Column className="row-gap-xxs">
         <Column className="row-gap-xxs">

@@ -17,7 +17,8 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul {
   margin: 0;
 }
 
@@ -39,6 +40,12 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
 }
 
 /* A elements that don't have a class get default styles */

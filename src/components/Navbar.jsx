@@ -1,8 +1,8 @@
 import logo from "../assets/shared/logo.svg";
 import iconHamburger from "../assets/shared/icon-hamburger.svg";
 import Row from "./Layout/Row";
-import styles from "../styles/components/Navbar.module.css";
 import Menu from "./Menu";
+import styles from "../styles/components/Navbar.module.css";
 
 export default function Navbar({ className }) {
   return (
@@ -11,7 +11,7 @@ export default function Navbar({ className }) {
         <img src={logo} />
       </a>
 
-      <Menu className={`${styles.menu} pd-block-md pd-inline-lg`} />
+      <Menu className={`${styles.menu}`} />
 
       <button className={styles.btnToggle}>
         <img src={iconHamburger} />

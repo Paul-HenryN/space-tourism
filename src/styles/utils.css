@@ -30,6 +30,15 @@
 .mg-top-sm {
   margin-top: var(--space-sm);
 }
+@media (min-width: 376px) {
+  .tablet-mg-top-xxl {
+    margin-top: var(--space-xxl);
+  }
+  .tablet-row-gap-xxxxl {
+    row-gap: var(--space-xxxxl);
+  }
+}
+
 .mg-top-md {
   margin-top: var(--space-md);
 }
@@ -87,4 +96,17 @@
 .heading-1,
 .heading-5 {
   text-transform: uppercase;
+}
+
+.txt-upper {
+  text-transform: uppercase;
+}
+.txt-secondary {
+  color: var(--clr-secondary);
+}
+.txt-ls-1 {
+  letter-spacing: var(--ls-1);
+}
+.txt-fs-7 {
+  font-size: var(--fs-7);
 }

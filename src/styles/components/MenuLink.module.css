@@ -1,0 +1,22 @@
+.menuLink {
+  position: relative;
+}
+
+.menuLink::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  background-color: currentColor;
+
+  position: absolute;
+  bottom: 0;
+
+  transition: transform 150ms ease-out;
+}
+
+.active::after,
+.menuLink:hover::after {
+  transform: scaleX(1);
+}
