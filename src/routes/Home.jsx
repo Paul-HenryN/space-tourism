@@ -3,26 +3,30 @@ import styles from "../styles/pages/Home.module.css";
 
 export default function Home() {
   return (
-    <Column
-      className={`${styles.container} align-center row-gap-xxl mx-auto mg-top-sm tablet-mg-top-xxl tablet-row-gap-xxxxl`}
-    >
-      <Column className="row-gap-xxs">
+    <>
+      <div className={styles.bg} />
+
+      <Column
+        className={`${styles.container} align-center row-gap-xxl mx-auto mg-top-sm tablet-mg-top-xxl desktop-mg-top-5xl tablet-row-gap-xxxxl desktop-flex-row desktop-align-end justify-between col-gap-md`}
+      >
         <Column className="row-gap-xxs">
-          <p className="heading-5">So, you want to travel to</p>
-          <h1 className="heading-1">space</h1>
+          <Column className="row-gap-xxs">
+            <p className="heading-5">So, you want to travel to</p>
+            <h1 className="heading-1">space</h1>
+          </Column>
+
+          <p>
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
         </Column>
 
-        <p>
-          Let’s face it; if you want to go to space, you might as well genuinely
-          go to outer space and not hover kind of on the edge of it. Well sit
-          back, and relax because we’ll give you a truly out of this world
-          experience!
-        </p>
+        <a href="#" className="btn-primary">
+          Explore
+        </a>
       </Column>
-
-      <a href="#" className="btn-primary">
-        Explore
-      </a>
-    </Column>
+    </>
   );
 }

@@ -6,7 +6,9 @@ import styles from "../styles/components/Navbar.module.css";
 
 export default function Navbar({ className }) {
   return (
-    <Row className={`${styles.navbar} justify-between pd-block-xs`}>
+    <Row
+      className={`${styles.navbar} justify-between align-center pd-block-xs desktop-pd-top-lg`}
+    >
       <a href="#">
         <img src={logo} />
       </a>

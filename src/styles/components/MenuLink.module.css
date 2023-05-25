@@ -2,6 +2,16 @@
   position: relative;
 }
 
+@media (min-width: 1200px) {
+  .menuLink::before {
+    counter-increment: menuLink;
+    content: "0" counter(menuLink);
+    margin-right: 10px;
+    font-weight: bold;
+    letter-spacing: var(--ls-2);
+  }
+}
+
 .menuLink::after {
   content: "";
   display: block;

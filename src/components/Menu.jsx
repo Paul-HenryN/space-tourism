@@ -3,8 +3,10 @@ import MenuLink from "./MenuLink";
 
 export default function Menu({ className }) {
   return (
-    <nav className={`${styles.menu} ${className} pd-inline-md`}>
-      <ul className="flex col-gap-md" role="menu">
+    <nav
+      className={`${styles.menu} ${className} pd-inline-md desktop-pd-inline-xxxl`}
+    >
+      <ul className="flex col-gap-md desktop-col-gap-lg" role="menu">
         <MenuLink to="/" active>
           Home
         </MenuLink>

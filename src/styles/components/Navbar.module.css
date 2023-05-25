@@ -10,6 +10,9 @@
   }
 }
 @media (min-width: 768px) {
+  .navbar {
+    padding-inline: 4% 0;
+  }
   .menu {
     display: block;
   }

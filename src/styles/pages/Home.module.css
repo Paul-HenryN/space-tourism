@@ -1,3 +1,31 @@
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: -100;
+  background-image: url("../../assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 376px) {
+  .bg {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+}
+@media (min-width: 1024px) {
+  .bg {
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+  }
+}
+
 .container {
   width: min(87%, 28rem);
+}
+@media (min-width: 769px) {
+  .container {
+    width: 77%;
+  }
+
+  .container > * {
+    width: 40%;
+  }
 }
