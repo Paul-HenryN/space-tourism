@@ -6,6 +6,8 @@ body {
   color: hsl(var(--clr-neutral));
   background-color: hsl(var(--clr-primary));
   text-align: center;
+
+  position: relative;
 }
 
 @media (min-width: 992px) {
