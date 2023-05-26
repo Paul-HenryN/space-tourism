@@ -7,7 +7,7 @@ export default function Home() {
       <div className={styles.bg} />
 
       <Column
-        className={`${styles.container} align-center row-gap-xxl mx-auto mg-top-sm tablet-mg-top-xxl desktop-mg-top-5xl tablet-row-gap-xxxxl desktop-flex-row desktop-align-end justify-between col-gap-md`}
+        className={`${styles.container} align-center row-gap-xxl mx-auto row-gap-sm-4xl flex-lg-row align-lg-end justify-between col-gap-md`}
       >
         <Column className="row-gap-xxs">
           <Column className="row-gap-xxs">

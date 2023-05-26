@@ -19,19 +19,25 @@
     15vw,
     calc(var(--fs-unit) * 9.375)
   ); /*150px*/
+
   --fs-2: calc(var(--fs-unit) * 6.25); /*100px*/
+
   --fs-3: calc(var(--fs-unit) * 3.5); /*56px*/
+
   --fs-4: clamp(
     calc(var(--fs-unit) * 1.25),
     4vw,
     calc(var(--fs-unit) * 2)
   ); /*32px*/
+
   --fs-5: clamp(
     calc(var(--fs-unit) * 1),
     2.6vw,
     calc(var(--fs-unit) * 1.75)
   ); /*150px*/
+
   --fs-6: calc(var(--fs-unit) * 1); /*16px*/
+
   --fs-7: clamp(
     calc(var(--fs-unit) * 0.875),
     1.5vw,
@@ -52,7 +58,7 @@
   /* Spacing */
   --space-unit: 1rem; /*16px*/
 
-  --space-xxxs: calc(var(--space-unit) * 0.75); /*12px*/
+  --space-3xs: calc(var(--space-unit) * 0.75); /*12px*/
   --space-xxs: calc(var(--space-unit) * 1); /*16px*/
   --space-xs: calc(var(--space-unit) * 1.5); /*24px*/
   --space-sm: calc(var(--space-unit) * 1.75); /*28px*/
@@ -60,7 +66,7 @@
   --space-lg: calc(var(--space-unit) * 3); /*48px*/
   --space-xl: calc(var(--space-unit) * 3.375); /*54px*/
   --space-xxl: calc(var(--space-unit) * 5); /*80px*/
-  --space-xxxl: calc(var(--space-unit) * 8.4375); /*135px*/
-  --space-xxxxl: calc(var(--space-unit) * 9.625); /*154px*/
+  --space-3xl: calc(var(--space-unit) * 8.4375); /*135px*/
+  --space-4xl: calc(var(--space-unit) * 9.625); /*154px*/
   --space-5xl: calc(var(--space-unit) * 15.625); /*250px*/
 }
