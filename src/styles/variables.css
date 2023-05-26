@@ -34,7 +34,7 @@
     calc(var(--fs-unit) * 1),
     2.6vw,
     calc(var(--fs-unit) * 1.75)
-  ); /*150px*/
+  ); /*28px*/
 
   --fs-6: calc(var(--fs-unit) * 1); /*16px*/
 

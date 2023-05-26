@@ -18,7 +18,7 @@
   height: 3px;
   width: 100%;
   transform: scaleX(0);
-  background-color: currentColor;
+  background-color: hsla(var(--clr-secondary), 30%);
 
   position: absolute;
   bottom: 0;
@@ -29,4 +29,7 @@
 .active::after,
 .menuLink:hover::after {
   transform: scaleX(1);
+}
+.active::after {
+  background-color: hsl(var(--clr-secondary));
 }

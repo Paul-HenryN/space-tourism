@@ -35,3 +35,11 @@ button {
   background: none;
   border: none;
 }
+
+.wallpaper {
+  position: absolute;
+  inset: 0;
+  z-index: -100;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

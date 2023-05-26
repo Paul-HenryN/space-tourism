@@ -4,7 +4,7 @@ import styles from "../styles/pages/Home.module.css";
 export default function Home() {
   return (
     <>
-      <div className={styles.bg} />
+      <div className={`${styles.bg} wallpaper`} />
 
       <Column
         className={`${styles.container} align-center row-gap-xxl mx-auto row-gap-sm-4xl flex-lg-row align-lg-end justify-between col-gap-md`}

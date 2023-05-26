@@ -110,12 +110,27 @@
   color: hsl(var(--clr-neutral));
   font-weight: 400;
 }
+.subheading-1 {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-5);
+  color: hsl(var(--clr-secondary));
+}
+.subheading-2 {
+  font-size: var(--fs-7);
+  letter-spacing: var(--ls-1);
+}
+
 .heading-1,
-.heading-5 {
+.heading-5,
+.subheading-1,
+.subheading-2 {
   text-transform: uppercase;
 }
 
 /* Typography */
+.ff-primary {
+  font-family: var(--ff-primary);
+}
 .txt-upper {
   text-transform: uppercase;
 }
