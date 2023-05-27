@@ -1,9 +1,9 @@
 export default function TabLink({ className, active, children, onClick }) {
   let finalClass =
-    "txt-neutral txt-upper pd-block-3xs hover-underlined txt-ls-1 txt-fs-7";
+    "txt-neutral txt-upper txt-ls-1 txt-fs-7 pd-block-3xs hover-underlined";
 
   if (active) {
-    finalClass += " txt-secondary underlined";
+    finalClass += " underlined";
   }
 
   return (

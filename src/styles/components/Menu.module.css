@@ -1,6 +1,5 @@
 .menu {
-  background-color: hsla(0, 0%, 100%, 4%);
-  color: white;
+  background-color: hsla(var(--clr-secondary), 4%);
   position: absolute;
   top: 0;
   right: 0;
@@ -10,7 +9,7 @@
     position: relative;
     counter-reset: menuLink;
     /* From https://css.glass */
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: hsla(var(--clr-secondary), 4%);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);

@@ -1,7 +1,8 @@
-import Column from "../components/Layout/Column";
+import { destinations } from "../shared/globals";
 import { useEffect, useState } from "react";
-import styles from "../styles/pages/Destination.module.css";
+import Column from "../components/Layout/Column";
 import TabLink from "../components/TabLink";
+import styles from "../styles/pages/Destination.module.css";
 
 async function fetchData(destinationName) {
   let newDestination;
@@ -11,7 +12,6 @@ async function fetchData(destinationName) {
     .then((data) => {
       for (const destination of data.destinations) {
         if (destination.name.toLowerCase() === destinationName.toLowerCase()) {
-          console.log(destination);
           newDestination = destination;
           break;
         }
@@ -41,52 +41,27 @@ export default function Destination() {
             src={`./src/${
               destination && destination.images && destination.images.png
             }`}
-            alt={destination.name}
+            alt={destination && destination.name}
           />
         </Column>
 
         <Column className="row-gap-sm align-center">
           <ul className="flex col-gap-xs" role="list">
-            <li>
-              <TabLink
-                onClick={() => {
-                  setDestinationName("moon");
-                }}
-                active={destinationName === "moon"}
-              >
-                Moon
-              </TabLink>
-            </li>
-            <li>
-              <TabLink
-                onClick={() => {
-                  setDestinationName("mars");
-                }}
-                active={destinationName === "mars"}
-              >
-                Mars
-              </TabLink>
-            </li>
-            <li>
-              <TabLink
-                onClick={() => {
-                  setDestinationName("europa");
-                }}
-                active={destinationName === "europa"}
-              >
-                Europa
-              </TabLink>
-            </li>
-            <li>
-              <TabLink
-                onClick={() => {
-                  setDestinationName("titan");
-                }}
-                active={destinationName === "titan"}
-              >
-                Titan
-              </TabLink>
-            </li>
+            {destinations.map((destination, i) => (
+              <li key={`destination${i}`}>
+                <TabLink
+                  onClick={() => {
+                    setDestinationName(destination);
+                  }}
+                  active={
+                    destinationName.toLocaleLowerCase() ===
+                    destination.toLocaleLowerCase()
+                  }
+                >
+                  {destination}
+                </TabLink>
+              </li>
+            ))}
           </ul>
 
           <Column>
