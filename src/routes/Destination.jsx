@@ -37,7 +37,7 @@ export default function Destination() {
         <Column className="row-gap-sm align-center">
           <h2 className="page-heading">Pick your destination</h2>
           <img
-            width="50%"
+            className={styles.illustration}
             src={`./src/${
               destination && destination.images && destination.images.png
             }`}
@@ -71,7 +71,7 @@ export default function Destination() {
 
           <Column className="row-gap-sm">
             <hr />
-            <Column className="row-gap-sm">
+            <Column className="row-gap-sm col-gap-xxl flex-sm-row">
               <Column>
                 <p className="subheading-2">Avg. Distance</p>
                 <p className="subheading-1">{destination.distance}</p>

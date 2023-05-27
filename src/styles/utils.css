@@ -29,6 +29,12 @@
 .col-gap-lg {
   column-gap: var(--space-lg);
 }
+.col-gap-xl {
+  column-gap: var(--space-xl);
+}
+.col-gap-xxl {
+  column-gap: var(--space-xxl);
+}
 .row-gap-xxs {
   row-gap: var(--space-xxs);
 }
@@ -212,6 +218,9 @@
 /* sm screen size mq (576px)*/
 @media (min-width: 576px) {
   /* Flex */
+  .flex-sm-row {
+    flex-direction: row;
+  }
   .row-gap-sm-4xl {
     row-gap: var(--space-4xl);
   }
