@@ -33,9 +33,14 @@ export default function Destination() {
     <>
       <div className={`${styles.bg} wallpaper`} />
 
-      <Column className="row-gap-sm mg-btm-xxl">
+      <h2 className="page-heading mg-top-3xs mg-btm-md mg-top-sm-lg mg-btm-sm-xl txt-align-sm-start mg-left-sm-lg mg-left-lg-4xl mg-btm-lg-3xl">
+        Pick your destination
+      </h2>
+
+      <Column
+        className={`${styles.container} row-gap-xxs mx-auto justify-between align-center flex-lg-row mg-btm-xxl`}
+      >
         <Column className="row-gap-sm align-center">
-          <h2 className="page-heading">Pick your destination</h2>
           <img
             className={styles.illustration}
             src={`./src/${
@@ -45,7 +50,7 @@ export default function Destination() {
           />
         </Column>
 
-        <Column className="row-gap-sm align-center">
+        <Column className="row-gap-xxs align-center align-lg-start">
           <ul className="flex col-gap-xs" role="list">
             {destinations.map((destination, i) => (
               <li key={`destination${i}`}>
@@ -67,19 +72,17 @@ export default function Destination() {
           <Column>
             <h1 className="heading-2">{destination && destination.name}</h1>
             <p>{destination && destination.description}</p>
+            <hr className="mg-top-sm" />
           </Column>
 
-          <Column className="row-gap-sm">
-            <hr />
-            <Column className="row-gap-sm col-gap-xxl flex-sm-row">
-              <Column>
-                <p className="subheading-2">Avg. Distance</p>
-                <p className="subheading-1">{destination.distance}</p>
-              </Column>
-              <Column>
-                <p className="subheading-2">Est. Travel Time</p>
-                <p className="subheading-1">{destination.travel}</p>
-              </Column>
+          <Column className="row-gap-sm col-gap-xxl flex-sm-row">
+            <Column>
+              <p className="subheading-2">Avg. Distance</p>
+              <p className="subheading-1">{destination.distance}</p>
+            </Column>
+            <Column>
+              <p className="subheading-2">Est. Travel Time</p>
+              <p className="subheading-1">{destination.travel}</p>
             </Column>
           </Column>
         </Column>

@@ -6,7 +6,25 @@
     background-image: url("../../assets/destination/background-destination-tablet.jpg");
   }
 }
+@media (min-width: 992px) {
+  .bg {
+    background-image: url("../../assets/destination/background-destination-desktop.jpg");
+  }
+}
 
 .illustration {
   width: clamp(170px, 40vw, 445px);
+}
+
+.container {
+  width: 80%;
+}
+@media (min-width: 992px) {
+  .container {
+    width: 75%;
+    column-gap: 10%;
+  }
+  .container > * {
+    width: 50%;
+  }
 }

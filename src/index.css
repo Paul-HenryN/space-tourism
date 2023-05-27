@@ -36,6 +36,12 @@ button {
   border: none;
 }
 
+hr {
+  display: block;
+  width: 100%;
+  border-top: 1px solid currentColor;
+}
+
 .wallpaper {
   position: absolute;
   inset: 0;
