@@ -1,0 +1,22 @@
+.container {
+  width: min(87%, 28rem);
+  margin-top: var(--space-sm);
+
+  counter-reset: page;
+}
+@media (min-width: 992px) {
+  .container {
+    width: 77%;
+    margin-top: 9vh;
+  }
+}
+@media (min-width: 992px) and (min-height: 900px) {
+  .container {
+    margin-top: 27vh;
+  }
+}
+@media (max-width: 992px) and (min-height: 1000px) {
+  .container {
+    margin-top: 11vh;
+  }
+}

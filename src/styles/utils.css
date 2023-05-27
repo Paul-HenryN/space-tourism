@@ -32,6 +32,12 @@
 .row-gap-xxs {
   row-gap: var(--space-xxs);
 }
+.row-gap-sm {
+  row-gap: var(--space-sm);
+}
+.row-gap-md {
+  row-gap: var(--space-md);
+}
 .row-gap-xxl {
   row-gap: var(--space-xxl);
 }
@@ -52,10 +58,28 @@
 .mg-top-xl {
   margin-top: var(--space-xl);
 }
+.mg-btm-sm {
+  margin-bottom: var(--space-sm);
+}
+.mg-btm-md {
+  margin-bottom: var(--space-md);
+}
+.mg-btm-lg {
+  margin-bottom: var(--space-lg);
+}
+.mg-btm-xxl {
+  margin-bottom: var(--space-xxl);
+}
 
 /* Paddings */
 .pd-sm {
   padding: var(--space-sm);
+}
+.pd-block-3xs {
+  padding-block: var(--space-3xs);
+}
+.pd-block-xxs {
+  padding-block: var(--space-xxs);
 }
 .pd-block-sm {
   padding-block: var(--space-sm);
@@ -65,9 +89,6 @@
 }
 .pd-block-xs {
   padding-block: var(--space-xs);
-}
-.pd-block-sm {
-  padding-block: var(--space-sm);
 }
 .pd-block-md {
   padding-block: var(--space-md);
@@ -103,12 +124,27 @@
 .heading-1 {
   font-size: var(--fs-1);
 }
+.heading-2 {
+  font-size: var(--fs-2);
+}
 .heading-5 {
   font-family: var(--ff-neutral);
   font-size: var(--fs-5);
   letter-spacing: var(--ls-3);
   color: hsl(var(--clr-neutral));
   font-weight: 400;
+}
+.page-heading {
+  counter-increment: page;
+  font-family: var(--ff-neutral);
+  font-size: var(--fs-5);
+  letter-spacing: var(--ls-3);
+}
+.page-heading::before {
+  content: "0" counter(page);
+  margin-right: var(--space-xxs);
+  color: hsla(var(--clr-secondary), 25%);
+  font-weight: bold;
 }
 .subheading-1 {
   font-family: var(--ff-primary);
@@ -136,6 +172,9 @@
 }
 .txt-secondary {
   color: var(--clr-secondary);
+}
+.txt-neutral {
+  color: hsl(var(--clr-neutral));
 }
 .txt-ls-1 {
   letter-spacing: var(--ls-1);
@@ -197,4 +236,29 @@
   .pd-inline-xl-3xl {
     padding-inline: var(--space-3xl);
   }
+}
+
+.underlined,
+.hover-underlined {
+  position: relative;
+}
+.underlined::after,
+.hover-underlined::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: currentColor;
+  position: absolute;
+  bottom: 0;
+
+  transition: transform 150ms ease-out;
+}
+.hover-underlined::after {
+  transform: scaleX(0);
+}
+
+.hover-underlined:hover::after,
+.underlined::after {
+  transform: scaleX(1);
 }

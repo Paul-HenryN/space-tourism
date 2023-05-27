@@ -20,7 +20,11 @@
     calc(var(--fs-unit) * 9.375)
   ); /*150px*/
 
-  --fs-2: calc(var(--fs-unit) * 6.25); /*100px*/
+  --fs-2: clamp(
+    calc(var(--fs-unit) * 3.5),
+    10vw,
+    calc(var(--fs-unit) * 6.25)
+  ); /*100px*/
 
   --fs-3: calc(var(--fs-unit) * 3.5); /*56px*/
 
