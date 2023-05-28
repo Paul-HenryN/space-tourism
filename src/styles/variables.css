@@ -9,14 +9,15 @@
 
   /* Font family */
   --ff-primary: "Bellefair", serif;
-  --ff-neutral: "Barlow Condensed", sans-serif;
+  --ff-secondary: "Barlow Condensed", sans-serif;
+  --ff-neutral: "Barlow", sans-serif;
 
   /* Font size */
   --fs-unit: 1rem; /*16px*/
 
   --fs-1: clamp(
     calc(var(--fs-unit) * 5),
-    15vw,
+    20vw,
     calc(var(--fs-unit) * 9.375)
   ); /*150px*/
 

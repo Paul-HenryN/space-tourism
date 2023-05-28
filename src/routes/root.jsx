@@ -8,7 +8,7 @@ export default function Root() {
         <Navbar />
       </header>
 
-      <main className={`mx-auto`}>
+      <main>
         <Outlet />
       </main>
     </>

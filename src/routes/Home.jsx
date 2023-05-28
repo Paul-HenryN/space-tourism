@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Column from "../components/Layout/Column";
 import styles from "../styles/pages/Home.module.css";
 
@@ -9,9 +10,11 @@ export default function Home() {
       <Column
         className={`${styles.container} align-center row-gap-xxl mx-auto row-gap-sm-4xl flex-lg-row align-lg-end justify-between col-gap-md`}
       >
-        <Column className="row-gap-xxs">
-          <Column className="row-gap-xxs">
-            <p className="heading-5">So, you want to travel to</p>
+        <Column className="row-gap-xs row-gap-hsm-3xs">
+          <Column className="row-gap-xs">
+            <p className="heading-5">
+              So, <wbr /> you want to travel to
+            </p>
             <h1 className="heading-1">space</h1>
           </Column>
 
@@ -23,9 +26,9 @@ export default function Home() {
           </p>
         </Column>
 
-        <a href="#" className="btn-primary">
+        <Link to="/destination" className="btn-primary">
           Explore
-        </a>
+        </Link>
       </Column>
     </>
   );

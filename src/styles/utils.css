@@ -44,6 +44,9 @@
 .row-gap-xxs {
   row-gap: var(--space-xxs);
 }
+.row-gap-3xs {
+  row-gap: var(--space-3xs);
+}
 .row-gap-xs {
   row-gap: var(--space-xs);
 }
@@ -155,7 +158,7 @@
   font-size: var(--fs-2);
 }
 .heading-5 {
-  font-family: var(--ff-neutral);
+  font-family: var(--ff-secondary);
   font-size: var(--fs-5);
   letter-spacing: var(--ls-3);
   color: hsl(var(--clr-neutral));
@@ -193,6 +196,9 @@
 /* Typography */
 .ff-primary {
   font-family: var(--ff-primary);
+}
+.ff-secondary {
+  font-family: var(--ff-secondary);
 }
 .txt-upper {
   text-transform: uppercase;
@@ -332,5 +338,14 @@
   /* Paddings */
   .pd-inline-xl-3xl {
     padding-inline: var(--space-3xl);
+  }
+}
+
+@media (max-height: 700px) {
+  .pd-top-hsm-sm {
+    padding-top: var(--space-sm);
+  }
+  .row-gap-hsm-3xs {
+    row-gap: var(--space-3xs);
   }
 }

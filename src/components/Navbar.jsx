@@ -8,7 +8,7 @@ import styles from "../styles/components/Navbar.module.css";
 export default function Navbar({ className }) {
   return (
     <Row
-      className={`${styles.navbar} justify-between align-center pd-block-xs pd-top-lg-lg`}
+      className={`${styles.navbar} justify-between align-center pd-block-xs pd-top-lg-lg pd-top-hsm-sm`}
     >
       <Link to="/">
         <img src={logo} />

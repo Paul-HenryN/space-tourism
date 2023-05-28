@@ -10,6 +10,10 @@ body {
   position: relative;
 }
 
+p {
+  line-height: 32px;
+}
+
 @media (min-width: 992px) {
   body {
     text-align: start;
@@ -30,6 +34,9 @@ h5 {
   font-weight: 400;
   color: hsl(var(--clr-secondary));
   text-transform: uppercase;
+}
+h1 {
+  line-height: 1;
 }
 button {
   background: none;
