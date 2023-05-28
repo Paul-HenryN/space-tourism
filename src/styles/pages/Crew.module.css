@@ -6,6 +6,11 @@
     background-image: url("../../assets/crew/background-crew-tablet.jpg");
   }
 }
+@media (min-width: 992px) {
+  .bg {
+    background-image: url("../../assets/crew/background-crew-desktop.jpg");
+  }
+}
 
 .container {
   width: 85%;
@@ -25,5 +30,19 @@
     position: absolute;
     height: 50vh;
     bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 80%;
+  }
+  .container > * {
+    width: 30%;
+  }
+  .illustration {
+    height: 50vw;
+    max-height: 700px;
+    right: 10%;
+    z-index: -10;
   }
 }

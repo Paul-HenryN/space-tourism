@@ -7,6 +7,9 @@
 .flex {
   display: flex;
 }
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -174,6 +177,9 @@
 .heading-2 {
   font-size: var(--fs-2);
 }
+.heading-3 {
+  font-size: var(--fs-3);
+}
 .heading-4 {
   font-family: var(--ff-primary);
   font-size: var(--fs-4);
@@ -205,10 +211,12 @@
 
 .heading-1,
 .heading-4,
+.heading-3,
 .heading-5,
 .subheading-1,
 .subheading-2 {
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* Typography */
@@ -351,10 +359,22 @@
   .flex-lg-row {
     flex-direction: row;
   }
+  .flex-lg-row-reverse {
+    flex-direction: row-reverse;
+  }
+  .row-gap-lg-xxl {
+    row-gap: var(--space-xxl);
+  }
+  .row-gap-lg-3xl {
+    row-gap: var(--space-3xl);
+  }
 
   /* Margins */
   .mg-top-lg-lg {
     margin-top: var(--space-lg);
+  }
+  .mg-top-lg-3xl {
+    margin-top: var(--space-3xl);
   }
   .mg-top-lg-5xl {
     margin-top: var(--space-5xl);
