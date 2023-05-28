@@ -76,11 +76,11 @@ export default function Destination() {
           </Column>
 
           <Column className="row-gap-sm col-gap-xxl flex-sm-row">
-            <Column>
+            <Column className="row-gap-3xs">
               <p className="subheading-2">Avg. Distance</p>
               <p className="subheading-1">{destination.distance}</p>
             </Column>
-            <Column>
+            <Column className="row-gap-3xs">
               <p className="subheading-2">Est. Travel Time</p>
               <p className="subheading-1">{destination.travel}</p>
             </Column>

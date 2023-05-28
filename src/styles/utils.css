@@ -166,7 +166,7 @@
 }
 .page-heading {
   counter-increment: page;
-  font-family: var(--ff-neutral);
+  font-family: var(--ff-secondary);
   font-size: var(--fs-5);
   letter-spacing: var(--ls-3);
 }
@@ -178,10 +178,11 @@
 }
 .subheading-1 {
   font-family: var(--ff-primary);
-  font-size: var(--fs-5);
+  font-size: 1.75rem;
   color: hsl(var(--clr-secondary));
 }
 .subheading-2 {
+  font-family: var(--ff-secondary);
   font-size: var(--fs-7);
   letter-spacing: var(--ls-1);
 }
@@ -250,6 +251,12 @@
   /* Flex */
   .flex-sm-row {
     flex-direction: row;
+  }
+  .row-gap-sm-xxs {
+    row-gap: var(--space-xxs);
+  }
+  .row-gap-sm-xs {
+    row-gap: var(--space-xs);
   }
   .row-gap-sm-4xl {
     row-gap: var(--space-4xl);

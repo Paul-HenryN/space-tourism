@@ -10,7 +10,7 @@ export default function Home() {
       <Column
         className={`${styles.container} align-center row-gap-xxl mx-auto row-gap-sm-4xl flex-lg-row align-lg-end justify-between col-gap-md`}
       >
-        <Column className="row-gap-xs row-gap-hsm-3xs">
+        <Column className="row-gap-xxs row-gap-sm-xs">
           <Column className="row-gap-xs">
             <p className="heading-5">
               So, <wbr /> you want to travel to
