@@ -41,6 +41,7 @@ h1 {
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 hr {

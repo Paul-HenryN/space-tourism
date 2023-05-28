@@ -1,9 +1,24 @@
-import img from "../assets/crew/image-douglas-hurley.png";
+import { dataFile } from "../shared/globals";
+import { useEffect, useState } from "react";
 import Column from "../components/Layout/Column";
 import Row from "../components/Layout/Row";
 import styles from "../styles/pages/Crew.module.css";
 
+async function fetchData(activeCrewMemberIndex) {
+  const response = await fetch(dataFile);
+  const data = await response.json();
+
+  return data.crew[activeCrewMemberIndex];
+}
+
 export default function Crew() {
+  let [activeCrewMemberIndex, setActiveCrewMemberIndex] = useState(2);
+  let [activeCrewMember, setActiveCrewMember] = useState({});
+
+  useEffect(() => {
+    fetchData(activeCrewMemberIndex).then(setActiveCrewMember);
+  }, [activeCrewMemberIndex]);
+
   return (
     <>
       <div className={`${styles.bg} wallpaper`} />
@@ -12,29 +27,60 @@ export default function Crew() {
 
       <Column>
         <Column>
-          <img src={img} />
+          {activeCrewMember.images ? (
+            <img
+              src={`./src/${activeCrewMember.images.png}`}
+              alt={activeCrewMember.name}
+            />
+          ) : (
+            <p>Loading...</p>
+          )}
           <hr />
         </Column>
 
         <Column>
-          <Row>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
+          <Row className="col-gap-sm justify-center">
+            <button
+              className="txt-secondary"
+              onClick={() => {
+                setActiveCrewMemberIndex(0);
+              }}
+            >
+              1
+            </button>
+            <button
+              className="txt-secondary"
+              onClick={() => {
+                setActiveCrewMemberIndex(1);
+              }}
+            >
+              2
+            </button>
+            <button
+              className="txt-secondary"
+              onClick={() => {
+                setActiveCrewMemberIndex(2);
+              }}
+            >
+              3
+            </button>
+            <button
+              className="txt-secondary"
+              onClick={() => {
+                setActiveCrewMemberIndex(3);
+              }}
+            >
+              4
+            </button>
           </Row>
 
           <Column>
             <Column>
-              <p>Commander</p>
-              <h2>Douglas hurley</h2>
+              <p>{activeCrewMember.role}</p>
+              <h2>{activeCrewMember.name}</h2>
             </Column>
 
-            <p>
-              Douglas Gerald Hurley is an American engineer, former Marine Corps
-              pilot and former NASA astronaut. He launched into space for the
-              third time as commander of Crew Dragon Demo-2.
-            </p>
+            <p>{activeCrewMember.bio}</p>
           </Column>
         </Column>
       </Column>
