@@ -1,5 +1,6 @@
 import Home from "../routes/Home";
 import Destination from "../routes/Destination";
+import Crew from "../routes/Crew";
 
 export const pages = [
   {
@@ -15,6 +16,7 @@ export const pages = [
   {
     name: "Crew",
     path: "/crew",
+    element: <Crew />,
   },
   {
     name: "Technology",
