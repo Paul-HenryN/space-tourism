@@ -1,0 +1,12 @@
+.bg {
+  background-image: url("../../assets/crew/background-crew-mobile.jpg");
+}
+
+.container {
+  width: 85%;
+}
+
+.illustration {
+  height: clamp(223px, 45vw, 650px);
+  max-width: none;
+}

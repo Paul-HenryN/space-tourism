@@ -2,35 +2,37 @@ import { dataFile } from "../shared/globals";
 import { useEffect, useState } from "react";
 import Column from "../components/Layout/Column";
 import Row from "../components/Layout/Row";
+import CarouselControl from "../components/CarouselControl";
 import styles from "../styles/pages/Crew.module.css";
 
-async function fetchData(activeCrewMemberIndex) {
+async function fetchData() {
   const response = await fetch(dataFile);
   const data = await response.json();
 
-  return data.crew[activeCrewMemberIndex];
+  return data.crew;
 }
 
 export default function Crew() {
-  let [activeCrewMemberIndex, setActiveCrewMemberIndex] = useState(2);
-  let [activeCrewMember, setActiveCrewMember] = useState({});
+  let [activeCrewMemberIndex, setActiveCrewMemberIndex] = useState(0);
+  let [crewMembers, setCrewMembers] = useState([]);
 
   useEffect(() => {
-    fetchData(activeCrewMemberIndex).then(setActiveCrewMember);
-  }, [activeCrewMemberIndex]);
+    fetchData().then(setCrewMembers);
+  }, []);
 
   return (
     <>
       <div className={`${styles.bg} wallpaper`} />
 
-      <h1 className="page-heading">Meet your crew</h1>
+      <h1 className="page-heading mg-btm-sm">Meet your crew</h1>
 
-      <Column>
-        <Column>
-          {activeCrewMember.images ? (
+      <Column className={`${styles.container} mx-auto row-gap-xs`}>
+        <Column className="align-center">
+          {crewMembers[activeCrewMemberIndex] ? (
             <img
-              src={`./src/${activeCrewMember.images.png}`}
-              alt={activeCrewMember.name}
+              className={styles.illustration}
+              src={`./src/${crewMembers[activeCrewMemberIndex].images.png}`}
+              alt={crewMembers[activeCrewMemberIndex].name}
             />
           ) : (
             <p>Loading...</p>
@@ -38,49 +40,38 @@ export default function Crew() {
           <hr />
         </Column>
 
-        <Column>
-          <Row className="col-gap-sm justify-center">
-            <button
-              className="txt-secondary"
-              onClick={() => {
-                setActiveCrewMemberIndex(0);
-              }}
-            >
-              1
-            </button>
-            <button
-              className="txt-secondary"
-              onClick={() => {
-                setActiveCrewMemberIndex(1);
-              }}
-            >
-              2
-            </button>
-            <button
-              className="txt-secondary"
-              onClick={() => {
-                setActiveCrewMemberIndex(2);
-              }}
-            >
-              3
-            </button>
-            <button
-              className="txt-secondary"
-              onClick={() => {
-                setActiveCrewMemberIndex(3);
-              }}
-            >
-              4
-            </button>
+        <Column className="row-gap-xs">
+          <Row className="col-gap-xxs justify-center">
+            {crewMembers.map((crewMember, i) => (
+              <CarouselControl
+                active={activeCrewMemberIndex === i}
+                key={`control${i}`}
+                onClick={() => {
+                  setActiveCrewMemberIndex(i);
+                }}
+              />
+            ))}
           </Row>
 
-          <Column>
-            <Column>
-              <p>{activeCrewMember.role}</p>
-              <h2>{activeCrewMember.name}</h2>
+          <Column className="row-gap-xxs">
+            <Column className="row-gap-3xs">
+              <p className="heading-4">
+                {crewMembers[activeCrewMemberIndex]
+                  ? crewMembers[activeCrewMemberIndex].role
+                  : "loading.."}
+              </p>
+              <h2>
+                {crewMembers[activeCrewMemberIndex]
+                  ? crewMembers[activeCrewMemberIndex].name
+                  : "loading..."}
+              </h2>
             </Column>
 
-            <p>{activeCrewMember.bio}</p>
+            <p>
+              {crewMembers[activeCrewMemberIndex]
+                ? crewMembers[activeCrewMemberIndex].bio
+                : "loading..."}
+            </p>
           </Column>
         </Column>
       </Column>

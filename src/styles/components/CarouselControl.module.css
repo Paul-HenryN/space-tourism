@@ -1,0 +1,12 @@
+.control {
+  --diameter: 10px;
+
+  width: var(--diameter);
+  height: var(--diameter);
+  border-radius: 50%;
+  background-color: hsla(var(--clr-secondary), 18%);
+}
+
+.control:hover {
+  background-color: hsl(var(--clr-secondary));
+}

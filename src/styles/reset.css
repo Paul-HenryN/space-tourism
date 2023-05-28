@@ -18,7 +18,8 @@ figure,
 blockquote,
 dl,
 dd,
-ul {
+ul,
+hr {
   margin: 0;
 }
 
