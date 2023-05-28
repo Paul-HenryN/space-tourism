@@ -25,5 +25,3 @@ export const pages = [
     path: "/technology",
   },
 ];
-
-export const destinations = ["Moon", "Mars", "Europa", "Titan"];
