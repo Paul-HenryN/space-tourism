@@ -1,12 +1,29 @@
 .bg {
   background-image: url("../../assets/crew/background-crew-mobile.jpg");
 }
+@media (min-width: 768px) {
+  .bg {
+    background-image: url("../../assets/crew/background-crew-tablet.jpg");
+  }
+}
 
 .container {
   width: 85%;
 }
+@media (min-width: 768px) {
+  .container {
+    width: 75%;
+  }
+}
 
 .illustration {
-  height: clamp(223px, 45vw, 650px);
+  height: clamp(223px, 60vw, 300px);
   max-width: none;
+}
+@media (min-width: 768px) {
+  .illustration {
+    position: absolute;
+    height: 50vh;
+    bottom: 0;
+  }
 }

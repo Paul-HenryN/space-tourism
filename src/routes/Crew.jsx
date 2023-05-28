@@ -4,6 +4,7 @@ import Column from "../components/Layout/Column";
 import Row from "../components/Layout/Row";
 import CarouselControl from "../components/CarouselControl";
 import styles from "../styles/pages/Crew.module.css";
+import PageHeading from "../components/PageHeading";
 
 async function fetchData() {
   const response = await fetch(dataFile);
@@ -24,9 +25,11 @@ export default function Crew() {
     <>
       <div className={`${styles.bg} wallpaper`} />
 
-      <h1 className="page-heading mg-btm-sm">Meet your crew</h1>
+      <PageHeading number="02">Meet your crew</PageHeading>
 
-      <Column className={`${styles.container} mx-auto row-gap-xs`}>
+      <Column
+        className={`${styles.container} mx-auto row-gap-xs flex-md-col-reverse`}
+      >
         <Column className="align-center">
           {crewMembers[activeCrewMemberIndex] ? (
             <img
@@ -37,10 +40,10 @@ export default function Crew() {
           ) : (
             <p>Loading...</p>
           )}
-          <hr />
+          <hr className="d-md-none" />
         </Column>
 
-        <Column className="row-gap-xs">
+        <Column className="row-gap-xs flex-md-col-reverse mg-top-md-lg">
           <Row className="col-gap-xxs justify-center">
             {crewMembers.map((crewMember, i) => (
               <CarouselControl

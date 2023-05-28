@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Column from "../components/Layout/Column";
 import TabLink from "../components/TabLink";
 import styles from "../styles/pages/Destination.module.css";
+import PageHeading from "../components/PageHeading";
 
 async function fetchData(destinationName) {
   let newDestination;
@@ -33,9 +34,7 @@ export default function Destination() {
     <>
       <div className={`${styles.bg} wallpaper`} />
 
-      <h2 className="page-heading mg-top-3xs mg-btm-md mg-top-sm-lg mg-btm-sm-xl txt-align-sm-start mg-left-sm-lg mg-left-lg-4xl mg-btm-lg-3xl">
-        Pick your destination
-      </h2>
+      <PageHeading number="01">Pick your destination</PageHeading>
 
       <Column
         className={`${styles.container} row-gap-xxs mx-auto justify-between align-center flex-lg-row mg-btm-xxl`}
