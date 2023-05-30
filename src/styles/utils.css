@@ -119,6 +119,9 @@
 }
 
 /* Paddings */
+.pd-xxs {
+  padding: var(--space-xxs);
+}
 .pd-sm {
   padding: var(--space-sm);
 }
@@ -229,6 +232,9 @@
 .txt-upper {
   text-transform: uppercase;
 }
+.txt-primary {
+  color: hsl(var(--clr-primary));
+}
 .txt-secondary {
   color: hsl(var(--clr-secondary));
 }
@@ -269,6 +275,33 @@
 .hover-underlined:hover::after,
 .underlined::after {
   transform: scaleX(1);
+}
+
+.border {
+  border-style: solid;
+}
+
+.border-1 {
+  border-width: 1px;
+}
+/* Border */
+.border-secondary {
+  border-color: hsl(var(--clr-secondary));
+}
+
+/* Hover */
+.hover-bg-secondary:hover {
+  background-color: hsl(var(--clr-secondary));
+}
+.hover-txt-primary:hover {
+  color: hsl(var(--clr-primary));
+}
+.round {
+  border-radius: 50%;
+}
+
+.square {
+  aspect-ratio: 1;
 }
 
 /* sm screen size mq (576px)*/

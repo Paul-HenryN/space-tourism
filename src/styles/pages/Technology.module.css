@@ -1,3 +1,7 @@
 .bg {
   background-image: url("../../assets/technology/background-technology-mobile.jpg");
 }
+
+.container {
+  width: 90%;
+}

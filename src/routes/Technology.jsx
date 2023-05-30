@@ -4,6 +4,7 @@ import styles from "../styles/pages/Technology.module.css";
 import { useEffect, useState } from "react";
 import Column from "../components/Layout/Column";
 import Row from "../components/Layout/Row";
+import CarouselButton from "../components/CarouselButton";
 
 async function fetchData() {
   const response = await fetch(dataFile);
@@ -30,6 +31,7 @@ export default function Technology() {
         <p>Loading...</p>
       ) : (
         <img
+          className="mg-btm-md"
           src={`./src/${technologies[activeTechnologyIndex].images.landscape}`}
           alt={technologies[activeTechnologyIndex].name}
         />
@@ -38,26 +40,24 @@ export default function Technology() {
       {!technologies[activeTechnologyIndex] ? (
         <p>Loading...</p>
       ) : (
-        <Column>
-          <Row className="justify-center col-gap-3xs">
+        <Column className={`${styles.container} mx-auto`}>
+          <Row className="justify-center col-gap-3xs mg-btm-sm">
             {technologies.map((technology, i) => (
-              <button
+              <CarouselButton
+                active={activeTechnologyIndex === i}
                 key={`tech${i}`}
                 onClick={() => setActiveTechnologyIndex(i)}
-                style={{
-                  backgroundColor: "white",
-                  width: "30px",
-                  height: "30px",
-                }}
               >
                 {i + 1}
-              </button>
+              </CarouselButton>
             ))}
           </Row>
 
           <Column>
-            <p>The terminology...</p>
-            <h2>{technologies[activeTechnologyIndex].name}</h2>
+            <p className="heading-5">The terminology...</p>
+            <h2 className="mg-btm-sm">
+              {technologies[activeTechnologyIndex].name}
+            </h2>
             <p>{technologies[activeTechnologyIndex].description}</p>
           </Column>
         </Column>
