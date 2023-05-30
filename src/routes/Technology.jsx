@@ -31,7 +31,7 @@ export default function Technology() {
         <p>Loading...</p>
       ) : (
         <img
-          className="mg-btm-md"
+          className="mg-btm-md mg-top-md-xl"
           src={`./src/${technologies[activeTechnologyIndex].images.landscape}`}
           alt={technologies[activeTechnologyIndex].name}
         />
@@ -55,7 +55,7 @@ export default function Technology() {
 
           <Column>
             <p className="heading-5">The terminology...</p>
-            <h2 className="mg-btm-sm">
+            <h2 className="heading-3 mg-btm-sm">
               {technologies[activeTechnologyIndex].name}
             </h2>
             <p>{technologies[activeTechnologyIndex].description}</p>

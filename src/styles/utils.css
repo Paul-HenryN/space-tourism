@@ -122,6 +122,9 @@
 .pd-xxs {
   padding: var(--space-xxs);
 }
+.pd-xs {
+  padding: var(--space-xs);
+}
 .pd-sm {
   padding: var(--space-sm);
 }
@@ -370,6 +373,16 @@
   }
   .mg-top-md-lg {
     margin-top: var(--space-lg);
+  }
+  .mg-top-md-xl {
+    margin-top: var(--space-lg);
+  }
+  .mg-btm-md-md {
+    margin-bottom: var(--space-md);
+  }
+
+  .pd-md-xs {
+    padding: var(--space-xs);
   }
 
   .justify-md-start {
