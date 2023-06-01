@@ -27,14 +27,14 @@ export default function Destination() {
       <PageHeading number="01">Pick your destination</PageHeading>
 
       <Column
-        className={`${styles.container} row-gap-xxs mx-auto justify-between align-center flex-lg-row mg-btm-xxl`}
+        className={`${styles.container} row-gap-xxs mx-auto justify-between align-end flex-lg-row mg-btm-xxl`}
       >
         <Column className="row-gap-sm align-center">
           {!destinations[activeDestinationIndex] ? (
             <p>Loading...</p>
           ) : (
             <img
-              className={styles.illustration}
+              className={`${styles.illustration} my-auto`}
               src={`./src/${destinations[activeDestinationIndex].images.png}`}
               alt={destinations[activeDestinationIndex].name}
             />
@@ -68,13 +68,13 @@ export default function Destination() {
                 <hr className="mg-top-sm" />
               </Column>
               <Column className="row-gap-sm col-gap-xxl flex-sm-row">
-                <Column className="row-gap-3xs">
+                <Column className="row-gap-3xs row-gap-lg-none">
                   <p className="subheading-2">Avg. Distance</p>
                   <p className="subheading-1">
                     {destinations[activeDestinationIndex].distance}
                   </p>
                 </Column>
-                <Column className="row-gap-3xs">
+                <Column className="row-gap-3xs row-gap-lg-none">
                   <p className="subheading-2">Est. Travel Time</p>
                   <p className="subheading-1">
                     {destinations[activeDestinationIndex].travel}

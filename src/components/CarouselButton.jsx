@@ -1,6 +1,6 @@
 export default function CarouselButton({ active, onClick, children }) {
   let finalClass =
-    "flex align-center justify-center pd-xxs pd-md-xs txt-secondary border border-1 border-secondary square round hover-bg-secondary hover-txt-primary";
+    "flex align-center justify-center pd-xxs pd-md-md txt-secondary border border-1 border-secondary square round hover-bg-secondary hover-txt-primary";
 
   if (active) {
     finalClass = finalClass.replace("txt-secondary", "txt-primary");

@@ -13,7 +13,7 @@
 }
 
 .illustration {
-  width: clamp(170px, 40vw, 445px);
+  width: clamp(170px, 40vw, 350px);
 }
 
 .container {
@@ -26,5 +26,10 @@
   }
   .container > * {
     width: 50%;
+  }
+
+  .illustration {
+    height: 350px;
+    width: auto;
   }
 }

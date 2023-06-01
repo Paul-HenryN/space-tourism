@@ -6,6 +6,11 @@
     background-image: url("../../assets/technology/background-technology-tablet.jpg");
   }
 }
+@media (min-width: 992px) {
+  .bg {
+    background-image: url("../../assets/technology/background-technology-desktop.jpg");
+  }
+}
 
 .container {
   width: 90%;
@@ -13,5 +18,22 @@
 @media (min-width: 768px) {
   .container {
     width: 65%;
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    text-align: start;
+    width: 50%;
+  }
+  .illustration {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: 8%;
+  }
+
+  .carouselButtons {
+    height: 304px;
   }
 }

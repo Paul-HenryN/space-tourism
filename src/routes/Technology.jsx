@@ -30,18 +30,29 @@ export default function Technology() {
       {!technologies[activeTechnologyIndex] ? (
         <p>Loading...</p>
       ) : (
-        <img
-          className="mg-btm-md mg-top-md-xl"
-          src={`./src/${technologies[activeTechnologyIndex].images.landscape}`}
-          alt={technologies[activeTechnologyIndex].name}
-        />
+        <picture
+          className={`${styles.illustration} mg-btm-md mg-top-md-xl m-md-none`}
+        >
+          <source
+            media="(min-width: 769px)"
+            srcSet={`./src/${technologies[activeTechnologyIndex].images.portrait}`}
+          />
+          <img
+            src={`./src/${technologies[activeTechnologyIndex].images.landscape}`}
+            alt={technologies[activeTechnologyIndex].name}
+          />
+        </picture>
       )}
 
       {!technologies[activeTechnologyIndex] ? (
         <p>Loading...</p>
       ) : (
-        <Column className={`${styles.container} mx-auto`}>
-          <Row className="justify-center col-gap-3xs mg-btm-sm">
+        <Column
+          className={`${styles.container} flex-md-row align-center justify-start mx-auto m-md-none mx-md-sm col-gap-xl align-md-start mg-top-md-xxl`}
+        >
+          <Row
+            className={`${styles.carouselButtons} justify-center col-gap-3xs mg-btm-sm flex-md-col justify-md-between`}
+          >
             {technologies.map((technology, i) => (
               <CarouselButton
                 active={activeTechnologyIndex === i}

@@ -28,7 +28,7 @@ export default function Crew() {
       <PageHeading number="02">Meet your crew</PageHeading>
 
       <Column
-        className={`${styles.container} mx-auto justify-between row-gap-xs flex-md-col-reverse flex-lg-row-reverse mg-top-lg-3xl`}
+        className={`${styles.container} mx-auto justify-between row-gap-xs flex-md-col-reverse flex-lg-row-reverse mg-top-lg-md`}
       >
         <Column className="align-center">
           {crewMembers[activeCrewMemberIndex] ? (

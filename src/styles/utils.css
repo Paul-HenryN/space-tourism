@@ -28,6 +28,9 @@
 .align-end {
   align-items: end;
 }
+.align-stretch {
+  align-items: stretch;
+}
 .col-gap-3xs {
   column-gap: var(--space-3xs);
 }
@@ -78,8 +81,17 @@
 }
 
 /* Margins */
+.m-none {
+  margin: none;
+}
 .mx-auto {
   margin-inline: auto;
+}
+.my-auto {
+  margin-block: auto;
+}
+.mx-sm {
+  margin-inline: var(--space-sm);
 }
 .mg-top-3xs {
   margin-top: var(--space-3xs);
@@ -127,6 +139,9 @@
 }
 .pd-sm {
   padding: var(--space-sm);
+}
+.pd-md {
+  padding: var(--space-md);
 }
 .pd-block-3xs {
   padding-block: var(--space-3xs);
@@ -357,14 +372,35 @@
 
 /* md screen size mq (768px) */
 @media (min-width: 768px) {
+  .flex-md-row {
+    flex-direction: row;
+  }
+  .flex-md-col {
+    flex-direction: column;
+  }
+  .flex-md-row {
+    flex-direction: row;
+  }
   .flex-md-col-reverse {
     flex-direction: column-reverse;
+  }
+  .align-md-start {
+    align-items: stretch;
+  }
+  .align-md-stretch {
+    align-items: stretch;
+  }
+  .justify-md-between {
+    justify-content: space-between;
   }
 
   .d-md-none {
     display: none;
   }
 
+  .m-md-none {
+    margin: 0;
+  }
   .mg-top-md-sm {
     margin-top: var(--space-sm);
   }
@@ -374,15 +410,21 @@
   .mg-top-md-lg {
     margin-top: var(--space-lg);
   }
-  .mg-top-md-xl {
-    margin-top: var(--space-lg);
+  .mg-top-md-xxl {
+    margin-top: var(--space-xxl);
   }
   .mg-btm-md-md {
     margin-bottom: var(--space-md);
   }
+  .mx-md-sm {
+    margin-inline: var(--space-3xl);
+  }
 
   .pd-md-xs {
     padding: var(--space-xs);
+  }
+  .pd-md-md {
+    padding: var(--space-md);
   }
 
   .justify-md-start {
@@ -404,6 +446,9 @@
   }
   .flex-lg-row {
     flex-direction: row;
+  }
+  .flex-lg-col {
+    flex-direction: column;
   }
   .flex-lg-row-reverse {
     flex-direction: row-reverse;
@@ -432,9 +477,16 @@
     margin-bottom: var(--space-xxl);
   }
 
+  .my-lg-none {
+    margin-block: 0;
+  }
+
   /* Paddings */
   .pd-top-lg-lg {
     padding-top: var(--space-lg);
+  }
+  .pd-lg-md {
+    padding: var(--space-md);
   }
 }
 
@@ -443,6 +495,9 @@
   /* Flex */
   .col-gap-xl-lg {
     column-gap: var(--space-lg);
+  }
+  .row-gap-lg-none {
+    row-gap: 0;
   }
 
   /* Margins */
