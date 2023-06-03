@@ -197,6 +197,9 @@
 .pd-top-lg {
   padding-top: var(--space-lg);
 }
+.pd-btm-xxl {
+  padding-bottom: var(--space-xxl);
+}
 .pd-left-3xs {
   padding-left: var(--space-3xs);
 }
