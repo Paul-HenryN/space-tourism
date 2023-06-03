@@ -27,7 +27,7 @@ export default function Destination() {
       <PageHeading number="01">Pick your destination</PageHeading>
 
       <Column
-        className={`${styles.container} row-gap-xxs row-gap-md-xl mx-auto justify-between align-center flex-lg-row mg-top-md mg-top-md-xl pd-btm-xxl`}
+        className={`${styles.container} row-gap-xxs row-gap-md-xl mx-auto justify-between align-center flex-lg-row mg-top-md mg-top-md-xl pd-btm-xl`}
       >
         {!destinations[activeDestinationIndex] ? (
           <p>Loading...</p>

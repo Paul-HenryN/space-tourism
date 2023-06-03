@@ -8,10 +8,10 @@ export default function Home() {
       <div className={`${styles.bg} wallpaper`} />
 
       <Column
-        className={`${styles.container} align-center row-gap-xxl mx-auto row-gap-sm-4xl flex-lg-row align-lg-end justify-between col-gap-md`}
+        className={`${styles.container} align-center row-gap-xxl mx-auto mg-top-lg mg-top-md-3xl mg-top-lg-xxl mg-top-wlg-hmd-3xl mg-top-wlg-hlg-5xl pd-btm-lg pd-btm-sm-xxl pd-btm-lg-md row-gap-sm-4xl flex-lg-row align-lg-end justify-between col-gap-md`}
       >
-        <Column className="row-gap-xxs row-gap-sm-xs">
-          <Column className="row-gap-xs">
+        <Column className="row-gap-xxs row-gap-md-xs">
+          <Column className="row-gap-xxs row-gap-md-xs">
             <p className="heading-5">
               So, <wbr /> you want to travel to
             </p>

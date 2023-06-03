@@ -14,10 +14,10 @@ export default function Navbar({ className }) {
   return (
     <>
       <Row
-        className={`${styles.navbar} justify-between align-center pd-top-sm pd-top-hlg-5xl`}
+        className={`${styles.navbar} justify-between align-center pd-top-xs pd-top-wlg-hmd-md`}
       >
         <Link to="/">
-          <img src={logo} />
+          <img src={logo} className={styles.logo} />
         </Link>
 
         <Menu className={`${styles.menu}`} />

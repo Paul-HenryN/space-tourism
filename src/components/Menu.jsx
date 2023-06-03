@@ -8,9 +8,9 @@ export default function Menu({ className }) {
 
   return (
     <nav
-      className={`${styles.menu} ${className} pd-inline-md pd-inline-xl-3xl`}
+      className={`${styles.menu} ${className} pd-inline-lg pd-inline-xl-xxl`}
     >
-      <ul className="flex col-gap-md col-xl-gap-lg" role="menu">
+      <ul className="flex col-gap-md col-gap-xl-lg" role="list">
         {pages.map((page, i) => (
           <MenuLink
             className="pd-block-md txt-fs-7 xl-numbered hover-underlined"

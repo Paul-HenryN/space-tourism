@@ -1,5 +1,8 @@
+.logo {
+  width: clamp(40px, 7vw, 48px);
+}
 .navbar {
-  padding-inline: 7%;
+  padding-inline: 6.4%;
 }
 .menu {
   display: none;
@@ -14,13 +17,15 @@
   }
 }
 @media (min-width: 768px) {
-  .navbar {
-    padding-inline: 4% 0;
-  }
   .menu {
     display: block;
   }
   .btnToggle {
     display: none;
+  }
+}
+@media (min-width: 992px) {
+  .navbar {
+    padding-inline: 3.82% 0;
   }
 }

@@ -20,7 +20,6 @@
 
 .container {
   width: min(87%, 28rem);
-  margin-top: var(--space-sm);
 }
 @media (min-width: 992px) {
   .container {
@@ -28,6 +27,7 @@
     margin-top: 16vh;
   }
 }
+
 @media (min-width: 992px) and (min-height: 800px) {
   .container {
     margin-top: 28vh;

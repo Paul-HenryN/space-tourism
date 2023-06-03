@@ -7,7 +7,7 @@
   font-size: var(--fs-4);
   text-transform: uppercase;
 
-  width: clamp(150px, 30vw, 274px);
+  width: clamp(150px, 31.5vw, 274px);
   aspect-ratio: 1;
   border-radius: 50%;
 
