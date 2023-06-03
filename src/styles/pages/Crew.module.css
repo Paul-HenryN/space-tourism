@@ -13,36 +13,39 @@
 }
 
 .container {
-  width: 85%;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 75%;
-  }
+  width: 87%;
 }
 
 .illustration {
-  height: clamp(223px, 60vw, 300px);
+  height: clamp(222px, 55vw, 300px);
   max-width: none;
 }
 @media (min-width: 768px) {
   .illustration {
     position: absolute;
-    height: 50vh;
+    height: 51.95vh;
     bottom: 0;
+    z-index: -10;
+  }
+
+  .container {
+    width: 66%;
+  }
+  .container > :last-child {
+    height: 232px;
   }
 }
 @media (min-width: 992px) {
   .container {
     width: 80%;
   }
-  .container > * {
-    width: 30%;
+  .container > :last-child {
+    height: 406px;
+    max-width: 40%;
   }
   .illustration {
     height: 35vw;
     max-height: 700px;
-    right: 10%;
-    z-index: -10;
+    right: 15%;
   }
 }

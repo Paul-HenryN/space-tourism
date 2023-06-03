@@ -253,7 +253,7 @@
 }
 .heading-4 {
   font-family: var(--ff-primary);
-  font-size: var(--fs-4);
+  font-size: clamp(calc(var(--fs-unit) * 1), 3.14vw, calc(var(--fs-unit) * 2));
   color: hsl(var(--clr-secondary), 50%);
 }
 .heading-5 {
@@ -627,6 +627,15 @@
   }
   .row-gap-lg-none {
     row-gap: 0;
+  }
+  .row-gap-xl-none {
+    row-gap: 0;
+  }
+  .row-gap-xl-md {
+    row-gap: var(--space-md);
+  }
+  .row-gap-xl-lg {
+    row-gap: var(--space-lg);
   }
   .flex-xl-row {
     flex-direction: row;
