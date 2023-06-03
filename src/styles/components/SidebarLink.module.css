@@ -1,0 +1,12 @@
+.sidebarLink {
+  position: relative;
+}
+.sidebarLink::before {
+  content: "0" counter(sidebarLink);
+  margin-right: 10px;
+  font-weight: bold;
+  letter-spacing: var(--ls-2);
+}
+.sidebarLink::before {
+  counter-increment: sidebarLink;
+}

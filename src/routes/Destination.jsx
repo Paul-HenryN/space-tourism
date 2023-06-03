@@ -27,26 +27,24 @@ export default function Destination() {
       <PageHeading number="01">Pick your destination</PageHeading>
 
       <Column
-        className={`${styles.container} row-gap-xxs mx-auto justify-between align-end flex-lg-row mg-btm-xxl`}
+        className={`${styles.container} row-gap-xxs row-gap-md-xl mx-auto justify-between align-center flex-lg-row mg-top-md mg-top-md-xl mg-btm-xxl`}
       >
-        <Column className="row-gap-sm align-center">
-          {!destinations[activeDestinationIndex] ? (
-            <p>Loading...</p>
-          ) : (
-            <img
-              className={`${styles.illustration} my-auto`}
-              src={`./src/${destinations[activeDestinationIndex].images.png}`}
-              alt={destinations[activeDestinationIndex].name}
-            />
-          )}
-        </Column>
+        {!destinations[activeDestinationIndex] ? (
+          <p>Loading...</p>
+        ) : (
+          <img
+            className={`${styles.illustration}`}
+            src={`./src/${destinations[activeDestinationIndex].images.png}`}
+            alt={destinations[activeDestinationIndex].name}
+          />
+        )}
 
-        <Column className="row-gap-xxs align-center align-lg-start">
+        <Column className="row-gap-xxs row-gap-md-xs align-center align-lg-start">
           {!destinations[activeDestinationIndex] ? (
             <p>Loading...</p>
           ) : (
             <>
-              <ul className="flex col-gap-xs" role="list">
+              <ul className="flex col-gap-xs col-gap-md-sm" role="list">
                 {destinations.map((destination, i) => (
                   <li key={`destination${i}`}>
                     <TabLink
@@ -65,7 +63,7 @@ export default function Destination() {
                   {destinations[activeDestinationIndex].name}
                 </h1>
                 <p>{destinations[activeDestinationIndex].description}</p>
-                <hr className="mg-top-sm" />
+                <hr className="mg-top-sm mg-top-md-lg" />
               </Column>
               <Column className="row-gap-sm col-gap-xxl flex-sm-row">
                 <Column className="row-gap-3xs row-gap-lg-none">

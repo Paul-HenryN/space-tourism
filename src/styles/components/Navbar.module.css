@@ -4,6 +4,10 @@
 .menu {
   display: none;
 }
+.btnToggle {
+  right: var(--space-sm);
+  z-index: 200;
+}
 @media (min-width: 376px) {
   .navbar {
     padding-inline: 5%;

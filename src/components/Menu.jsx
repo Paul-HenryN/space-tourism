@@ -13,9 +13,11 @@ export default function Menu({ className }) {
       <ul className="flex col-gap-md col-xl-gap-lg" role="menu">
         {pages.map((page, i) => (
           <MenuLink
+            className="pd-block-md txt-fs-7 xl-numbered hover-underlined"
             key={i}
             to={page.path}
             active={location.pathname === page.path}
+            activeClass="underlined"
           >
             {page.name}
           </MenuLink>

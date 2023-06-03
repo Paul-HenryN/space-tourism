@@ -1,15 +1,13 @@
-.menuLink {
-  position: relative;
-}
-
 @media (min-width: 1200px) {
+  .menuLink {
+    position: relative;
+  }
   .menuLink::before {
     content: "0" counter(menuLink);
     margin-right: 10px;
     font-weight: bold;
     letter-spacing: var(--ls-2);
   }
-
   .menuLink::after {
     counter-increment: menuLink;
   }

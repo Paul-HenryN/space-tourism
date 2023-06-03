@@ -19,9 +19,14 @@
 .container {
   width: 85%;
 }
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .container {
     width: 75%;
+    column-gap: 10%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
     column-gap: 10%;
   }
   .container > * {

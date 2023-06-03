@@ -41,7 +41,7 @@
 
   --fs-5: clamp(
     calc(var(--fs-unit) * 1),
-    1.9vw,
+    2.6vw,
     calc(var(--fs-unit) * 1.75)
   ); /*28px*/
 
@@ -49,13 +49,13 @@
 
   --fs-7: clamp(
     calc(var(--fs-unit) * 0.875),
-    1.5vw,
+    2.1vw,
     calc(var(--fs-unit) * 1)
   ); /*14px*/
 
   --fs-neutral: clamp(
     calc(var(--fs-unit) * 0.9375),
-    3vw,
+    2.1vw,
     calc(var(--fs-unit) * 1.125)
   ); /*18px*/
 
