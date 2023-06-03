@@ -49,7 +49,7 @@
 
   --fs-7: clamp(
     calc(var(--fs-unit) * 0.875),
-    1.8vw,
+    2.1vw,
     calc(var(--fs-unit) * 1)
   ); /*14px*/
 

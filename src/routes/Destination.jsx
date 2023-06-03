@@ -27,7 +27,7 @@ export default function Destination() {
       <PageHeading number="01">Pick your destination</PageHeading>
 
       <Column
-        className={`${styles.container} row-gap-xxs row-gap-md-xl mx-auto justify-between align-center flex-lg-row mg-top-md mg-top-md-xl pd-btm-xl`}
+        className={`${styles.container} row-gap-xs row-gap-md-xl mx-auto justify-center align-center flex-lg-row mg-top-md mg-top-md-xl mg-top-lg-none mg-top-wlg-hmd-xl mg-top-wlg-hlg-xxl pd-btm-lg`}
       >
         {!destinations[activeDestinationIndex] ? (
           <p>Loading...</p>
@@ -39,7 +39,7 @@ export default function Destination() {
           />
         )}
 
-        <Column className="row-gap-xxs row-gap-md-xs align-center align-lg-start">
+        <Column className="row-gap-xs row-gap-lg-3xs row-gap-wlg-hlg-md align-center align-lg-start">
           {!destinations[activeDestinationIndex] ? (
             <p>Loading...</p>
           ) : (
@@ -59,11 +59,11 @@ export default function Destination() {
                 ))}
               </ul>
               <Column>
-                <h1 className="heading-2">
+                <h2 className="heading-2">
                   {destinations[activeDestinationIndex].name}
-                </h1>
+                </h2>
                 <p>{destinations[activeDestinationIndex].description}</p>
-                <hr className="mg-top-sm mg-top-md-lg" />
+                <hr className="mg-top-sm mg-top-md-lg mg-top-lg-3xs mg-top-wlg-hmd-sm mg-top-wlg-hlg-xl" />
               </Column>
               <Column className="row-gap-sm col-gap-xxl flex-sm-row">
                 <Column className="row-gap-3xs row-gap-lg-none">
