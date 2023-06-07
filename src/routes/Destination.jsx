@@ -27,7 +27,7 @@ export default function Destination() {
       <PageHeading number="01">Pick your destination</PageHeading>
 
       <Column
-        className={`${styles.container} row-gap-xs row-gap-md-xl mx-auto justify-center align-center flex-lg-row mg-top-md mg-top-md-xl mg-top-lg-none mg-top-wlg-hmd-xl mg-top-wlg-hlg-xxl pd-btm-lg`}
+        className={`${styles.container} row-gap-xs row-gap-md-xl mx-auto justify-center align-center align-lg-end flex-lg-row mg-top-md mg-top-md-xl mg-top-lg-none mg-top-wlg-hmd-xl mg-top-wlg-hlg-xxl pd-btm-lg pd-btm-md-xl`}
       >
         {!destinations[activeDestinationIndex] ? (
           <p>Loading...</p>
@@ -39,7 +39,7 @@ export default function Destination() {
           />
         )}
 
-        <Column className="row-gap-xs row-gap-lg-3xs row-gap-wlg-hlg-md align-center align-lg-start">
+        <Column className="row-gap-xs row-gap-lg-3xs row-gap-wlg-hlg-md align-center justify-between align-lg-start">
           {!destinations[activeDestinationIndex] ? (
             <p>Loading...</p>
           ) : (

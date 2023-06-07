@@ -28,7 +28,7 @@ export default function Crew() {
       <PageHeading number="02">Meet your crew</PageHeading>
 
       <Column
-        className={`${styles.container} mx-auto justify-between row-gap-xs flex-md-col-reverse flex-lg-row-reverse mg-top-sm mg-top-md-xl mg-top-lg-md mg-top-xl-none pd-btm-xl pd-btm-xl-none`}
+        className={`${styles.container} mx-auto justify-between row-gap-xs flex-md-col-reverse flex-lg-row-reverse mg-top-sm mg-top-md-xl mg-top-lg-xxl mg-top-wlg-hmd-4xl pd-btm-xl pd-btm-xl-lg`}
       >
         <Column className="align-center">
           {crewMembers[activeCrewMemberIndex] ? (
@@ -43,7 +43,7 @@ export default function Crew() {
           <hr className="d-md-none" />
         </Column>
 
-        <Column className="row-gap-xs flex-md-col-reverse align-lg-start row-gap-lg-xxl row-gap-xl-lg">
+        <Column className="row-gap-xs justify-between flex-md-col-reverse align-lg-start row-gap-lg-xxl row-gap-xl-lg row-gap-wlg-hmd-xl">
           <Row className="col-gap-xxs justify-center">
             {crewMembers.map((crewMember, i) => (
               <CarouselControl
@@ -56,8 +56,8 @@ export default function Crew() {
             ))}
           </Row>
 
-          <Column className="row-gap-xxs">
-            <Column className="row-gap-3xs">
+          <Column className="row-gap-xxs row-gap-wlg-hmd-sm">
+            <Column className="row-gap-3xs row-gap-wlg-hmd-xxs">
               <p className="heading-4">
                 {crewMembers[activeCrewMemberIndex]
                   ? crewMembers[activeCrewMemberIndex].role

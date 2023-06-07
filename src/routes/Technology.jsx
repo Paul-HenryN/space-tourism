@@ -30,14 +30,13 @@ export default function Technology() {
       {!technologies[activeTechnologyIndex] ? (
         <p>Loading...</p>
       ) : (
-        <picture
-          className={`${styles.illustration} mg-btm-md mg-top-md-xl m-md-none`}
-        >
+        <picture className={`${styles.illustration} mg-top-sm mg-top-md-xl`}>
           <source
             media="(min-width: 769px)"
             srcSet={`./src/${technologies[activeTechnologyIndex].images.portrait}`}
           />
           <img
+            className="mx-auto"
             src={`./src/${technologies[activeTechnologyIndex].images.landscape}`}
             alt={technologies[activeTechnologyIndex].name}
           />
@@ -48,10 +47,10 @@ export default function Technology() {
         <p>Loading...</p>
       ) : (
         <Column
-          className={`${styles.container} flex-md-row align-center justify-start mx-auto m-md-none mx-md-sm col-gap-xl align-md-start mg-top-md-xxl`}
+          className={`${styles.container} flex-lg-row align-center justify-start row-gap-sm row-gap-md-lg mx-auto mx-lg-12 mg-top-md mg-top-md-xl mg-top-wlg-hmd-3xl col-gap-xl align-md-start pd-btm-xl`}
         >
           <Row
-            className={`${styles.carouselButtons} justify-center col-gap-3xs mg-btm-sm flex-md-col justify-md-between`}
+            className={`${styles.carouselButtons} justify-center justify-lg-between col-gap-3xs flex-lg-col justify-lg-between`}
           >
             {technologies.map((technology, i) => (
               <CarouselButton
@@ -66,10 +65,12 @@ export default function Technology() {
 
           <Column>
             <p className="heading-5">The terminology...</p>
-            <h2 className="heading-3 mg-btm-sm">
+            <h2 className="heading-3 mg-top-3xs">
               {technologies[activeTechnologyIndex].name}
             </h2>
-            <p>{technologies[activeTechnologyIndex].description}</p>
+            <p className="mg-top-xxs">
+              {technologies[activeTechnologyIndex].description}
+            </p>
           </Column>
         </Column>
       )}

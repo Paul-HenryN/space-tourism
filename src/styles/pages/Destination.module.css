@@ -24,14 +24,15 @@
   .container {
     width: 75%;
   }
-  .container > :last-child {
-    height: 400px;
-  }
 }
 
 @media (min-width: 992px) {
   .container {
     column-gap: 10%;
+  }
+
+  .container > :last-child {
+    height: 400px;
   }
 }
 

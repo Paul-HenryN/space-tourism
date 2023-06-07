@@ -23,9 +23,10 @@
 @media (min-width: 768px) {
   .illustration {
     position: absolute;
-    height: 51.95vh;
     bottom: 0;
     z-index: -10;
+
+    display: none;
   }
 
   .container {
@@ -35,17 +36,44 @@
     height: 232px;
   }
 }
+@media (min-width: 768px) and (min-height: 750px) {
+  .illustration {
+    display: block;
+
+    height: 40vh;
+  }
+}
+@media (min-width: 768px) and (min-height: 950px) {
+  .illustration {
+    height: 51.95vh;
+  }
+}
+
 @media (min-width: 992px) {
   .container {
-    width: 80%;
+    width: 77%;
   }
   .container > :last-child {
-    height: 406px;
+    height: 300px;
     max-width: 40%;
   }
   .illustration {
-    height: 35vw;
-    max-height: 700px;
-    right: 15%;
+    display: block;
+    height: clamp(400px, 35vw, 500px);
+    right: 10%;
+  }
+}
+
+@media (min-width: 992px) and (min-height: 750px) {
+  .illustration {
+    height: clamp(450px, 40vw, 550px);
+  }
+}
+@media (min-width: 992px) and (min-height: 850px) {
+  .illustration {
+    height: clamp(500px, 50vw, 650px);
+  }
+  .container > :last-child {
+    height: 406px;
   }
 }

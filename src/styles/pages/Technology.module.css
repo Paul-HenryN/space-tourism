@@ -17,23 +17,30 @@
 }
 @media (min-width: 768px) {
   .container {
-    width: 65%;
+    width: 59.5%;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   .container {
-    text-align: start;
     width: 50%;
   }
+
   .illustration {
-    width: 30%;
     position: absolute;
     right: 0;
     bottom: 8%;
+    width: clamp(250px, 25%, 390px);
   }
 
   .carouselButtons {
     height: 304px;
+  }
+}
+
+@media (min-width: 992px) and (min-height: 750px) {
+  .illustration {
+    width: clamp(300px, 30%, 400px);
+    bottom: 20%;
   }
 }

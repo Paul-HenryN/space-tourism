@@ -16,6 +16,9 @@
 .flex-col-reverse {
   flex-direction: column-reverse;
 }
+.justify-start {
+  justify-content: start;
+}
 .justify-between {
   justify-content: space-between;
 }
@@ -258,7 +261,7 @@
 }
 .heading-5 {
   font-family: var(--ff-secondary);
-  font-size: var(--fs-5);
+  font-size: var(--fs-7);
   letter-spacing: var(--ls-3);
   color: hsl(var(--clr-neutral));
   font-weight: 400;
@@ -476,6 +479,9 @@
   .row-gap-md-xs {
     row-gap: var(--space-xs);
   }
+  .row-gap-md-lg {
+    row-gap: var(--space-lg);
+  }
   .row-gap-md-xl {
     row-gap: var(--space-xl);
   }
@@ -521,8 +527,14 @@
   .pd-md-xs {
     padding: var(--space-xs);
   }
+  .pd-md-sm {
+    padding: var(--space-sm);
+  }
   .pd-md-md {
     padding: var(--space-md);
+  }
+  .pd-btm-md-xl {
+    padding-bottom: var(--space-xl);
   }
   .pd-btm-md-3xl {
     padding-bottom: var(--space-3xl);
@@ -544,6 +556,9 @@
   }
   .align-lg-end {
     align-items: end;
+  }
+  .justify-lg-between {
+    justify-content: space-between;
   }
   .flex-lg-row {
     flex-direction: row;
@@ -603,6 +618,16 @@
     margin-top: var(--space-xxl);
   }
 
+  .mx-lg-none {
+    margin-inline: 0;
+  }
+  .mx-lg-xl {
+    margin-inline: var(--space-4xl);
+  }
+  .mx-lg-12 {
+    margin-inline: 12%;
+  }
+
   .my-lg-none {
     margin-block: 0;
   }
@@ -657,6 +682,9 @@
   .pd-btm-xl-none {
     padding-bottom: 0;
   }
+  .pd-btm-xl-lg {
+    padding-bottom: var(--space-lg);
+  }
   .mg-top-xl-none {
     margin-top: 0;
   }
@@ -665,6 +693,9 @@
   }
   .mg-top-xl-xs {
     margin-top: var(--space-xs);
+  }
+  .mg-top-xl-xl {
+    margin-top: var(--space-xxl);
   }
 }
 
@@ -684,14 +715,32 @@
   .mg-top-wlg-hmd-xl {
     margin-top: var(--space-xl);
   }
+  .mg-top-wlg-hmd-xxl {
+    margin-top: var(--space-xl);
+  }
   .mg-top-wlg-hmd-3xl {
     margin-top: var(--space-3xl);
+  }
+  .mg-top-wlg-hmd-4xl {
+    margin-top: var(--space-4xl);
+  }
+  .mg-top-wlg-hmd-5xl {
+    margin-top: var(--space-5xl);
   }
   .mg-top-wlg-hmd-5xl {
     margin-top: var(--space-5xl);
   }
   .row-gap-hsm-3xs {
     row-gap: var(--space-3xs);
+  }
+  .row-gap-wlg-hmd-xxs {
+    row-gap: var(--space-xxs);
+  }
+  .row-gap-wlg-hmd-sm {
+    row-gap: var(--space-sm);
+  }
+  .row-gap-wlg-hmd-xl {
+    row-gap: var(--space-xl);
   }
 }
 
