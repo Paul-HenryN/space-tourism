@@ -6,6 +6,7 @@ export default function MenuLink({
   to,
   active,
   activeClass,
+  onClick,
   children,
 }) {
   var finalClass = `${className} ${styles.menuLink} ff-secondary txt-upper txt-secondary txt-ls-1`;
@@ -15,7 +16,13 @@ export default function MenuLink({
   }
 
   return (
-    <Link className={finalClass} to={to}>
+    <Link
+      className={finalClass}
+      to={to}
+      onClick={() => {
+        if (onClick) onClick();
+      }}
+    >
       {children}
     </Link>
   );

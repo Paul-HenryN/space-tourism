@@ -4,7 +4,7 @@ import styles from "../styles/components/Sidebar.module.css";
 import SidebarLink from "./SidebarLink";
 import { useLocation } from "react-router-dom";
 
-export default function Sidebar({ visible }) {
+export default function Sidebar({ visible, setVisible }) {
   const location = useLocation();
 
   return (
@@ -21,6 +21,9 @@ export default function Sidebar({ visible }) {
               key={`sidebarLink${i}`}
               to={page.path}
               active={page.path === location.pathname}
+              onClick={() => {
+                setVisible(false);
+              }}
             >
               {page.name}
             </SidebarLink>

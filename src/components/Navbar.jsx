@@ -33,7 +33,12 @@ export default function Navbar({ className }) {
         </button>
       </Row>
 
-      <Sidebar visible={sidebarVisible} />
+      <Sidebar
+        visible={sidebarVisible}
+        setVisible={(visible) => {
+          setSidebarVisible(visible);
+        }}
+      />
     </>
   );
 }

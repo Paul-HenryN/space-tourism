@@ -261,7 +261,7 @@
 }
 .heading-5 {
   font-family: var(--ff-secondary);
-  font-size: var(--fs-7);
+  font-size: var(--fs-5);
   letter-spacing: var(--ls-3);
   color: hsl(var(--clr-neutral));
   font-weight: 400;

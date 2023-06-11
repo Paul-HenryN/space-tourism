@@ -47,7 +47,7 @@ export default function Technology() {
         <p>Loading...</p>
       ) : (
         <Column
-          className={`${styles.container} flex-lg-row align-center justify-start row-gap-sm row-gap-md-lg mx-auto mx-lg-12 mg-top-md mg-top-md-xl mg-top-wlg-hmd-3xl col-gap-xl align-md-start pd-btm-xl`}
+          className={`${styles.container} flex-lg-row align-center justify-start row-gap-sm row-gap-md-lg mx-auto mx-lg-12 mg-top-md mg-top-md-xl mg-top-lg-xxl mg-top-wlg-hmd-3xl col-gap-xl align-md-start pd-btm-xl`}
         >
           <Row
             className={`${styles.carouselButtons} justify-center justify-lg-between col-gap-3xs flex-lg-col justify-lg-between`}
