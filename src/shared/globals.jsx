@@ -8,22 +8,22 @@ export const dataFile = "./src/data.json";
 export const pages = [
   {
     name: "Home",
-    path: "/",
+    path: "/space-tourism",
     element: <Home />,
   },
   {
     name: "Destination",
-    path: "/destination",
+    path: "/space-tourism/destination",
     element: <Destination />,
   },
   {
     name: "Crew",
-    path: "/crew",
+    path: "/space-tourism/crew",
     element: <Crew />,
   },
   {
     name: "Technology",
-    path: "/technology",
+    path: "/space-tourism/technology",
     element: <Technology />,
   },
 ];
