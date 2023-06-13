@@ -2,8 +2,9 @@ import Home from "../routes/Home";
 import Destination from "../routes/Destination";
 import Crew from "../routes/Crew";
 import Technology from "../routes/Technology";
+import json from "../data.json";
 
-export const dataFile = "/space-tourism/assets/data.json";
+export const dataFile = json;
 
 export const pages = [
   {

@@ -6,8 +6,7 @@ import styles from "../styles/pages/Destination.module.css";
 import PageHeading from "../components/PageHeading";
 
 async function fetchData() {
-  const response = await fetch(dataFile);
-  const data = await response.json();
+  const data = dataFile;
 
   return data.destinations;
 }
@@ -34,7 +33,7 @@ export default function Destination() {
         ) : (
           <img
             className={`${styles.illustration}`}
-            src={`./src/${destinations[activeDestinationIndex].images.png}`}
+            src={`/space-tourism/src/${destinations[activeDestinationIndex].images.png}`}
             alt={destinations[activeDestinationIndex].name}
           />
         )}
