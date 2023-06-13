@@ -3,7 +3,7 @@ import Destination from "../routes/Destination";
 import Crew from "../routes/Crew";
 import Technology from "../routes/Technology";
 
-export const dataFile = "src/data.json";
+export const dataFile = "/src/data.json";
 
 export const pages = [
   {
