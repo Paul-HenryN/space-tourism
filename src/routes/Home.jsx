@@ -26,7 +26,7 @@ export default function Home() {
           </p>
         </Column>
 
-        <Link to="/destination/" className="btn-primary">
+        <Link to="/space-tourism/destination/" className="btn-primary">
           Explore
         </Link>
       </Column>
