@@ -7,8 +7,7 @@ import Row from "../components/Layout/Row";
 import CarouselButton from "../components/CarouselButton";
 
 async function fetchData() {
-  const response = await fetch(dataFile);
-  const data = await response.json();
+  const data = dataFile;
 
   return data.technology;
 }
@@ -33,11 +32,11 @@ export default function Technology() {
         <picture className={`${styles.illustration} mg-top-sm mg-top-md-xl`}>
           <source
             media="(min-width: 769px)"
-            srcSet={`./src/${technologies[activeTechnologyIndex].images.portrait}`}
+            srcSet={`/src/${technologies[activeTechnologyIndex].images.portrait}`}
           />
           <img
             className="mx-auto"
-            src={`./src/${technologies[activeTechnologyIndex].images.landscape}`}
+            src={`/src/${technologies[activeTechnologyIndex].images.landscape}`}
             alt={technologies[activeTechnologyIndex].name}
           />
         </picture>

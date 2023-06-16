@@ -7,8 +7,7 @@ import styles from "../styles/pages/Crew.module.css";
 import PageHeading from "../components/PageHeading";
 
 async function fetchData() {
-  const response = await fetch(dataFile);
-  const data = await response.json();
+  const data = dataFile;
 
   return data.crew;
 }
@@ -34,7 +33,7 @@ export default function Crew() {
           {crewMembers[activeCrewMemberIndex] ? (
             <img
               className={styles.illustration}
-              src={`./src/${crewMembers[activeCrewMemberIndex].images.png}`}
+              src={`/src/${crewMembers[activeCrewMemberIndex].images.png}`}
               alt={crewMembers[activeCrewMemberIndex].name}
             />
           ) : (

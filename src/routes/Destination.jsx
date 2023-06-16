@@ -33,7 +33,7 @@ export default function Destination() {
         ) : (
           <img
             className={`${styles.illustration}`}
-            src={`/space-tourism/src/${destinations[activeDestinationIndex].images.png}`}
+            src={`/src/${destinations[activeDestinationIndex].images.png}`}
             alt={destinations[activeDestinationIndex].name}
           />
         )}

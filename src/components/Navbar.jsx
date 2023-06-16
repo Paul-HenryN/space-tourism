@@ -16,7 +16,7 @@ export default function Navbar({ className }) {
       <Row
         className={`${styles.navbar} justify-between align-center pd-top-xs pd-top-wlg-hmd-md`}
       >
-        <Link to="/">
+        <Link to="/space-tourism/">
           <img src={logo} className={styles.logo} />
         </Link>
 
