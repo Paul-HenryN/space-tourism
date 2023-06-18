@@ -5,6 +5,23 @@ import { useEffect, useState } from "react";
 import Column from "../components/Layout/Column";
 import Row from "../components/Layout/Row";
 import CarouselButton from "../components/CarouselButton";
+import imgLaunchVehiclePortrait from "../assets/technology/image-launch-vehicle-portrait.jpg";
+import imgLaunchVehicleLandscape from "../assets/technology/image-launch-vehicle-Landscape.jpg";
+import imgSpaceCapsulePortrait from "../assets/technology/image-space-capsule-portrait.jpg";
+import imgSpaceCapsuleLandscape from "../assets/technology/image-space-capsule-landscape.jpg";
+import imgSpaceportPortrait from "../assets/technology/image-spaceport-portrait.jpg";
+import imgSpaceportLandscape from "../assets/technology/image-spaceport-landscape.jpg";
+
+const portraitImages = [
+  imgLaunchVehiclePortrait,
+  imgSpaceportPortrait,
+  imgSpaceCapsulePortrait,
+];
+const landscapeImages = [
+  imgLaunchVehicleLandscape,
+  imgSpaceportLandscape,
+  imgSpaceCapsuleLandscape,
+];
 
 async function fetchData() {
   const data = dataFile;
@@ -32,11 +49,11 @@ export default function Technology() {
         <picture className={`${styles.illustration} mg-top-sm mg-top-md-xl`}>
           <source
             media="(min-width: 769px)"
-            srcSet={`/src/${technologies[activeTechnologyIndex].images.portrait}`}
+            srcSet={portraitImages[activeTechnologyIndex]}
           />
           <img
             className="mx-auto"
-            src={`/src/${technologies[activeTechnologyIndex].images.landscape}`}
+            src={landscapeImages[activeTechnologyIndex]}
             alt={technologies[activeTechnologyIndex].name}
           />
         </picture>

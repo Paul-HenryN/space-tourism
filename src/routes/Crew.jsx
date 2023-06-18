@@ -5,6 +5,12 @@ import Row from "../components/Layout/Row";
 import CarouselControl from "../components/CarouselControl";
 import styles from "../styles/pages/Crew.module.css";
 import PageHeading from "../components/PageHeading";
+import imgAnsari from "../assets/crew/image-anousheh-ansari.png";
+import imgDouglas from "../assets/crew/image-douglas-hurley.png";
+import imgMark from "../assets/crew/image-mark-shuttleworth.png";
+import imgVictor from "../assets/crew/image-victor-glover.png";
+
+const images = [imgDouglas, imgMark, imgVictor, imgAnsari];
 
 async function fetchData() {
   const data = dataFile;
@@ -33,7 +39,7 @@ export default function Crew() {
           {crewMembers[activeCrewMemberIndex] ? (
             <img
               className={styles.illustration}
-              src={`/src/${crewMembers[activeCrewMemberIndex].images.png}`}
+              src={images[activeCrewMemberIndex]}
               alt={crewMembers[activeCrewMemberIndex].name}
             />
           ) : (
