@@ -4,6 +4,12 @@ import Column from "../components/Layout/Column";
 import TabLink from "../components/TabLink";
 import styles from "../styles/pages/Destination.module.css";
 import PageHeading from "../components/PageHeading";
+import imgEuropa from "../assets/destination/image-europa.png";
+import imgMars from "../assets/destination/image-mars.png";
+import imgMoon from "../assets/destination/image-moon.png";
+import imgTitan from "../assets/destination/image-titan.png";
+
+const images = [imgMoon, imgMars, imgEuropa, imgTitan];
 
 async function fetchData() {
   const data = dataFile;
@@ -33,7 +39,7 @@ export default function Destination() {
         ) : (
           <img
             className={`${styles.illustration}`}
-            src={`/src/${destinations[activeDestinationIndex].images.png}`}
+            src={images[activeDestinationIndex]}
             alt={destinations[activeDestinationIndex].name}
           />
         )}
